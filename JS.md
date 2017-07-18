@@ -52,3 +52,95 @@
 1. 请问调用栈 (call stack) 和任务队列 (task queue) 的区别是什么？
 1. 解释 function foo() {} 与 var foo = function() {} 用法的区别	
 	函数声明式，程序运行前就已经存在了；变量声明式，会有先后顺序
+
+## 原型 ##
+在js中，每一个对象都会与另一个对象相关联，从另一个对象继承属性，这里的另一个对象就是 **原型**。原型本身也是一个对象，其他对象可以通过它实现属性继承，也可以将任何一个对象作为自身对象的原型。js的任何对象都有原型，除了原型链顶端的对象：Object.prototype
+## 原型链 ##
+有原型就会出现原型的访问链，一个JS对象原型指向其父类，而父类对象又指向这个父类的原型，这种原型层层连接起来的关系就是原型链，获取原型对象的方法：var a={};a._proto_或者a.constructor.prototype;
+## 闭包 ##
+闭包就是指能够访问另一个函数作用域变量的函数就是闭包。
+
+简单的demo:
+
+	function outer(){
+		var a=0;
+		function inner(){
+		console.log(a++);		
+		}
+		return inner;
+	}
+	var closeur=outer();
+	closeur(); //1
+	closeur();//2
+
+闭包的特性：
+
+1.函数返回嵌套的函数形成闭包；
+
+2.闭包内部可以访问外部的参数和变量；
+
+3.外部参数和变量在被闭包引用时不会被垃圾回收；
+
+闭包的优点：
+
+1.避免变量对全局的污染；
+
+2.允许函数私有成员的存在；
+
+3.允许变量常驻内存
+
+应用场景：
+
+1.采用函数引用方式的setTimeout调用
+
+2.将函数关联到对象的实例方法
+
+3.封装相关的功能集
+
+## this的指向 ##
+this的指向是函数被调用的时候才确定的。
+
+this指向有以下四个场景：
+
+1.如果一个函数中有this,且它没有以对方方法的形式调用，而是以函数名方式执行，那么this就是全局对象。
+
+    function demo(){
+     console.log(this)
+    }
+    demo()//window
+
+2.如果一个函数中有this，且这个函数是以对象方法的形式调用，那么this指向就是调用这个方法的对象。
+
+    var obj={
+      test:function(){
+         console.log(this);
+      }
+    }
+    obj.test();//obj
+
+3.如果一个函数中有this，并且包含该函数的对象也同时被另一个对象包含，尽管这个函数被最外层的对象调用，但它扔指向它的上级对象。
+    
+      var obj={
+    
+      test:{
+     	fun:function(){
+      			console.log(this)
+    		}
+    	}
+    
+    }
+    obj.test.fun();//test
+
+
+4.如果一个构造函数或者类方法中有this，那么它指向由该构造函数或 类创建出来的实例对象。
+
+    class Test{
+     constructor(){
+       this.test="test"; //类实例
+       
+    }
+    option(){
+     console.log(this); //类实例
+    }
+    
+    }
