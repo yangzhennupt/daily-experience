@@ -1,5 +1,7 @@
 1. 请解释事件代理 (event delegation)。
+    事件代理利用了事件冒泡的机制，把事件绑定到某个父类元素上，这样就能只用一个事件处理程序就能管理一个类型的所有事件，通过event.target来判断点击的元素是哪个，然后针对特定元素进行处理。
 1. 请解释 JavaScript 中 this 是如何工作的。
+	this的指向是被调用的时候才确定的
 1. 请解释原型继承 (prototypal inheritance) 的原理。
 1. 你怎么看 AMD vs. CommonJS？
 	AMD与CommonJS区别在于模块加载，AMD是同步的，CommonJs是异步的
@@ -12,10 +14,11 @@
 1. 请指出以下代码的区别：function Person(){}、var person = Person()、var person = new Person()？
 1. .call 和 .apply 的区别是什么？
 	传递的参数不一致，call(obj,arg1,arg2,arg3) apply(obj,[arg1,arg2...])
-1. 请解释 Function.prototype.bind？
+1. 请解释Function.prototype.bind？
 1. 在什么时候你会使用 document.write()？
 1. 请指出浏览器特性检测，特性推断和浏览器 UA 字符串嗅探的区别？
 1. 请尽可能详尽的解释 Ajax 的工作原理。
+	异步请求基于XMLHttpRequest对象，
 1. 使用 Ajax 都有哪些优劣？
 1. 请解释 JSONP 的工作原理，以及它为什么不是真正的 Ajax。
 1. 你使用过 JavaScript 模板系统吗？
