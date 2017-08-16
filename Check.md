@@ -25,5 +25,14 @@
 	1. this是在运行时基于函数的执行环境绑定的
 8. 原型链
 9. Ajax 
-	`var xhr=new XMLHttpRequest();xhr.onreadystatechange=function(){ if(xhr.readyState=4){if(xhr.status>=200&&xhr.status<300||xhr.status==304){do something}}}`
+
+    	var xhr=new XMLHttpRequest();
+    
+    	xhr.onreadystatechange=function(){
+     
+    	if(xhr.readyState=4){
+    
+    		if(xhr.status>=200&&xhr.status<300||xhr.status==304){
+    			do something
+    		}}}
 10. 数组去重

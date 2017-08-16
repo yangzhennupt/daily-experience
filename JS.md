@@ -15,20 +15,25 @@
 1. .call 和 .apply 的区别是什么？
 	传递的参数不一致，call(obj,arg1,arg2,arg3) apply(obj,[arg1,arg2...])
 1. 请解释Function.prototype.bind？
+	bind是改变this的指向的，它不会立即执行某个函数，而是返回修改后的函数
 1. 在什么时候你会使用 document.write()？
 1. 请指出浏览器特性检测，特性推断和浏览器 UA 字符串嗅探的区别？
 1. 请尽可能详尽的解释 Ajax 的工作原理。
 	异步请求基于XMLHttpRequest对象，
 1. 使用 Ajax 都有哪些优劣？
 1. 请解释 JSONP 的工作原理，以及它为什么不是真正的 Ajax。
-1. 你使用过 JavaScript 模板系统吗？
-1. 如有使用过，请谈谈你都使用过哪些库？
+	由于同源安全策略，跨域请求是被禁止的，为了解决这个问题，jsonp利用了script标签的src可以访问其他不同源脚本的特性，动态的添加了一个script标签，然后传给服务器一个回调函数名称，当数据返回时，便会触发这个回调函数，以此来实现跨域请求。这中间并没有设计XMLHttpRequest对象，所以说它不是真正的Ajax.
+1. 你使用过 JavaScript 模板系统吗？如有使用过，请谈谈你都使用过哪些库？
+	vm、artTemplate
 1. 请解释变量声明提升 (hoisting)。
+	当我们是使用函数声明式来定义函数时，会发现一个现象，就是我们可以把函数的定义写在代码的最下面，然后在定义的上面直接调用这个函数，这是因为JS引擎在解析代码时，会先确定有那些变量、函数需要提前定义，然后再执行。
 1. 请描述事件冒泡机制 (event bubbling)。
+	事件冒泡机制是从元素被点击开始，从这一层级、事件一直被传播到document。
 1. "attribute" 和 "property" 的区别是什么？
 1. 为什么扩展 JavaScript 内置对象不是好的做法？
 1. 请指出 document load 和 document DOMContentLoaded 两个事件的区别。
 1. == 和 === 有什么不同？
+	==会隐式的进行类型转换，比如‘123’==123 true   ===是不进行类型转换，数值与类型必须完全相同才返回true
 1. 请解释 JavaScript 的同源策略 (same-origin policy)。
 1. 如何实现下列代码：
 1. [1,2,3,4,5].duplicator(); // [1,2,3,4,5,1,2,3,4,5]
