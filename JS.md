@@ -4,7 +4,7 @@
 	this的指向是被调用的时候才确定的
 1. 请解释原型继承 (prototypal inheritance) 的原理。
 1. 你怎么看 AMD vs. CommonJS？
-	AMD与CommonJS区别在于模块加载，AMD是同步的，CommonJs是异步的
+	AMD与CommonJS区别在于模块加载，AMD是异步的，CommonJs是同步的
 1. 请解释为什么接下来这段代码不是 IIFE (立即调用的函数表达式)：function foo(){ }();要做哪些改动使它变成 IIFE?
 1. 描述以下变量的区别：null，undefined 或 undeclared？该如何检测它们？
 1. 什么是闭包 (closure)，如何使用它，为什么要使用它？
