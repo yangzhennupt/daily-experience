@@ -1,4 +1,4 @@
-1. typeof 检测一个为声明的值也会返回undefined,而不是抛出错误。
+1. typeof 检测一个未声明的值也会返回undefined,而不是抛出错误。
 
     	var message;
     
