@@ -11,3 +11,7 @@
 
 ###  性能优化  ###
 
+### 面试 ###
+
+- [JS常见的基础知识点](https://github.com/yangzhennupt/daily-experience/issues/1 "JS常见的基础知识点")
+
