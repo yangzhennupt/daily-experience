@@ -8,10 +8,11 @@
 ###  CSS  ###
 
 ###  JavaScript  ###
+- [常见的继承实现方式](https://github.com/yangzhennupt/daily-experience/issues/2 "常见继承的实现方式")
 
 ###  性能优化  ###
 
 ### 面试 ###
 
-- [JS常见的基础知识点](https://github.com/yangzhennupt/daily-experience/issues/1 "JS常见的基础知识点")
+- [JS的基础知识点](https://github.com/yangzhennupt/daily-experience/issues/1 "JS的基础知识点")
 
