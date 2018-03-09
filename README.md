@@ -9,6 +9,7 @@
 
 ###  JavaScript  ###
 - [常见的继承实现方式](https://github.com/yangzhennupt/daily-experience/issues/2 "常见继承的实现方式")
+- [观察者(发布订阅模式)的实现](https://github.com/yangzhennupt/daily-experience/issues/3 "发布订阅模式的实现")
 
 ###  性能优化  ###
 
