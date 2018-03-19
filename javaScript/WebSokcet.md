@@ -18,6 +18,9 @@ WebSocket 采用了自定义协议而非HTTP协议，能够在客户端和服务
 
 	var socket = new WebSocket("ws://www.demo.com/a.action");
 
+
+还有一个可选参数protocols：可以是一个单个的协议名字字符串，或包括多个协议名字字符串的数组，这些字符串用来表示子协议，这样做可以让一个服务器实现多个WebSocket子协议，不传则默认为空字符串。
+
 必须给构造函数传入一个绝对路径的URL，WebSocket无同源策略，因此可以通过它打开任意站点的连接，至于是否通信，则是服务器决定的。
 实例化WebSocket之后，浏览器马上会尝试建立连接，与XmlHttpRequest对象一样，webSocket也有一个表示当前状态的readyState属性：
 
