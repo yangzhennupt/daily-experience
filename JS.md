@@ -152,7 +152,7 @@ this指向有以下四个场景：
     }
     
     }
-##JS数组遍历的几种方法##
+## JS数组遍历的几种方法 ##
  - forEach
  - map
  - filter
@@ -160,7 +160,7 @@ this指向有以下四个场景：
  - every
  - reduce
  - find/findIndex(ES6)
-###forEach###
+### forEach ###
 forEach是对数组里面的每一个元素都执行某个操作;
 
     var arr=[1,2,3];
@@ -176,7 +176,7 @@ forEach是对数组里面的每一个元素都执行某个操作;
     		}
       	}
     }
-###map###
+### map ###
 map是将原来的数组按照一定的规则映射为新数据，**返回的是新数组**；
     
       var list=[1,2,3];
@@ -196,7 +196,7 @@ map是将原来的数组按照一定的规则映射为新数据，**返回的是
 	   return arr;
 	}
 
-###filter###
+### filter ###
 filter返回过滤后、符合条件的新书组，用法和map差不多。有区别的是，filter的回调函数需要返回弱等于true或false的值，如果为true,则通过。
     
     var arr = [0, 1, 2, 3];
@@ -223,7 +223,7 @@ filter返回过滤后、符合条件的新书组，用法和map差不多。有�
       return arr;
     };
 
-###some###
+### some ###
 只要数组中某个数值符合条件就返回true,否则返回false；
 
 	var isGood=[1,2,3].some(function(element,index,array){
@@ -234,5 +234,5 @@ filter返回过滤后、符合条件的新书组，用法和map差不多。有�
 	})
 	console.log(isGood) //false
 	console.log(isGood2)//true
-###every###
+### every ###
 与some相对，每个元素都符合条件时返回true,否则返回false
